@@ -14,15 +14,14 @@ export default defineConfigWithVueTs(
     files: ['**/*.{ts,mts,tsx,vue}'],
   },
 
-  {
-    rules:{
-      'vue/multi-word-component-names': 0
-    }
-  },
-
   globalIgnores(['**/dist/**', '**/dist-ssr/**', '**/coverage/**']),
 
   pluginVue.configs['flat/essential'],
   vueTsConfigs.recommended,
   skipFormatting,
+  {
+    rules:{
+      'vue/multi-word-component-names': 0
+    }
+  },
 )
