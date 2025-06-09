@@ -14,14 +14,22 @@
     "supabase:init": "supabase init",
     "supabase:login": "supabase login",
     "supabase:link": "supabase link --project-ref xcwsfkbobuexvinzemlm",
-    "db:migrate:new": "supabase migration new projects-schema",
+    "db:migrate:new": "supabase migration new",
     "db:reset": "supabase db reset --linked",
     "db:seed": "node --env-file=.env database/seed.js",
-    "supabase:types": "npx supabase gen types typescript --project-id xcwsfkbobuexvinzemlm --schema public > database.types.ts"
+    "supabase:types": "npx supabase gen types typescript --project-id xcwsfkbobuexvinzemlm --schema public > database/database.types.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.43.4",
+    "@tailwindcss/postcss": "^4.1.8",
+    "@tailwindcss/vite": "^4.1.8",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-vue-next": "^0.513.0",
     "pinia": "^3.0.3",
+    "tailwind-merge": "^3.3.0",
+    "tailwindcss": "^4.1.8",
+    "tailwindcss-animate": "^1.0.7",
     "vue": "^3.5.16",
     "vue-router": "^4.5.1"
   },
@@ -33,6 +41,7 @@
     "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/eslint-config-typescript": "^14.5.0",
     "@vue/tsconfig": "^0.7.0",
+    "autoprefixer": "^10.4.21",
     "eslint": "^9.28.0",
     "eslint-plugin-vue": "~10.2.0",
     "jiti": "^2.4.2",
