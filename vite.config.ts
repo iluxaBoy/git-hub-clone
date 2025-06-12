@@ -10,13 +10,19 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [
     VueRouter(),
-    vue(),
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (element) => element.startsWith('iconify-icon'),
+        },
+      },
+    }),
     vueDevTools(),
     tailwindcss(),
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
 })
