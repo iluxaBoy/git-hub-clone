@@ -2,15 +2,6 @@
   import type { ColumnDef } from '@tanstack/vue-table'
   import { FlexRender, getCoreRowModel, useVueTable } from '@tanstack/vue-table'
 
-  import {
-    Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableHeader,
-    TableRow,
-  } from '@/components/ui/table'
-
   const props = defineProps<{
     columns: ColumnDef<TData, TValue>[]
     data: TData[]
@@ -79,3 +70,13 @@
     </Table>
   </div>
 </template>
+
+<style scoped>
+  td {
+    padding: 0;
+  }
+
+  td > * {
+    padding: 10px;
+  }
+</style>
