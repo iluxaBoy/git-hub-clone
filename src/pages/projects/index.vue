@@ -7,9 +7,9 @@
   const projects = ref<Projects | null>()
 
   const getProjects = async (): Promise<void> => {
-    const { data, error } = await projectsQuery
+    const { data, error, status } = await projectsQuery
 
-    if (error) throw error
+    if (error) useErrorStore().setError({ error, customCode: status })
 
     projects.value = data
   }
@@ -23,4 +23,3 @@
     :data="projects"
   />
 </template>
-

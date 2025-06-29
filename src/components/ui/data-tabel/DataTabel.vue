@@ -72,11 +72,13 @@
 </template>
 
 <style scoped>
+  @reference "@/assets/main.css";
+
   td {
-    padding: 0;
+    @apply p-0;
   }
 
   td > * {
-    padding: 10px;
+    @apply p-3;
   }
 </style>

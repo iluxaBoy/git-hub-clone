@@ -14,9 +14,9 @@
   )
 
   const getTask = async () => {
-    const { data, error } = await taskQuery(taskId)
+    const { data, error, status } = await taskQuery(taskId)
 
-    if (error) throw error
+    if (error) useErrorStore().setError({ error, customCode: status })
 
     task.value = data
   }

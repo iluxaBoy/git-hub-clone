@@ -14,9 +14,9 @@
   )
 
   const getProject = async () => {
-    const { data, error } = await projectQuery(projectSlug)
+    const { data, error, status } = await projectQuery(projectSlug)
 
-    if (error) throw error
+    if (error) useErrorStore().setError({ error, customCode: status })
 
     project.value = data
   }
