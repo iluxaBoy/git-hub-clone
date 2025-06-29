@@ -7,9 +7,9 @@
   const tasks = ref<TasksWithProjects | null>()
 
   const getTasks = async (): Promise<void> => {
-    const { data, error } = await tasksWithProjectsQuery
+    const { data, error, status } = await tasksWithProjectsQuery
 
-    if (error) throw error
+    if (error) useErrorStore().setError({ error, customCode: status })
 
     tasks.value = data
   }
@@ -23,4 +23,3 @@
     :data="tasks"
   />
 </template>
-
