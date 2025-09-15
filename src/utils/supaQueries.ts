@@ -2,14 +2,15 @@ import { supabase } from '@/lib/supabaseClient'
 import type { QueryData } from '@supabase/supabase-js'
 
 // TASKS
-export const tasksWithProjectsQuery = supabase.from('tasks').select(`
+export const tasksWithProjectsQuery = supabase.from('tasks').select(
+  `
     *,
     projects(
       id,
       name,
       slug
     )
-    `)
+  `)
 
 export type TasksWithProjects = QueryData<typeof tasksWithProjectsQuery>
 
@@ -18,13 +19,13 @@ export const taskQuery = (id: string) =>
     .from('tasks')
     .select(
       `
-  *,
-  projects(
-    id,
-    name,
-    slug
-  )
-  `,
+        *,
+        projects(
+          id,
+          name,
+          slug
+        )
+      `,
     )
     .eq('id', id)
     .single()

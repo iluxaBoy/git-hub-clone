@@ -46,8 +46,9 @@
             <Label
               id="username"
               class="text-left"
-              >Username</Label
             >
+              Username
+            </Label>
             <Input
               id="username"
               type="text"
@@ -61,8 +62,9 @@
               <Label
                 id="first_name"
                 class="text-left"
-                >First Name</Label
               >
+                First Name
+              </Label>
               <Input
                 id="first_name"
                 type="text"
@@ -75,8 +77,9 @@
               <Label
                 id="last_name"
                 class="text-left"
-                >Last Name</Label
               >
+                Last Name
+              </Label>
               <Input
                 id="last_name"
                 type="text"
@@ -90,8 +93,9 @@
             <Label
               id="email"
               class="text-left"
-              >Email</Label
             >
+              Email
+            </Label>
             <Input
               id="email"
               type="email"
@@ -105,8 +109,9 @@
             <Label
               id="password"
               class="text-left"
-              >Password</Label
             >
+              Password
+            </Label>
             <Input
               id="password"
               type="password"
@@ -121,8 +126,9 @@
             <Label
               id="confirm_password"
               class="text-left"
-              >Confirm Password</Label
             >
+              Confirm Password
+            </Label>
             <Input
               id="confirm_password"
               type="password"
