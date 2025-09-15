@@ -41,8 +41,9 @@
             <Label
               id="email"
               class="text-left"
-              >Email</Label
             >
+              Email
+            </Label>
             <Input
               type="email"
               placeholder="johndoe19@example.com"

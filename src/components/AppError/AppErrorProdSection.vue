@@ -13,7 +13,7 @@
   })
 
   if (props.isCustomError) {
-    error.value.code = props.statusCode
+    error.value.code = props.customCode
     error.value.msg = props.message
   }
 
