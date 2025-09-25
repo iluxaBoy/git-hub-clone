@@ -30,9 +30,7 @@ export const login = async (formData: LoginForm) => {
     password: formData.password,
   })
 
-  if (error) throw error
-
-  return true
+  return { error }
 }
 
 export const signOut = async () => {
